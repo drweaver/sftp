@@ -65,12 +65,12 @@ if [ ! -f "$userConfFinalPath" ]; then
     fi
 
 
-    # Pull keys from a mounted folder in case frameork (like azure) cannot mount a single file
-    if [ -f /etc/ssh/certs/ssh_host_ed25519_key ]; then
-        ln -s /etc/ssh/certs/ssh_host_ed25519_key /etc/ssh/ssh_host_ed25519_key
+    # Pull keys from a mounted folder in case framework (like azure) cannot mount a single file
+    if [ -f /etc/sftp/ssh-config/ssh_host_ed25519_key ]; then
+        ln -s /etc/sftp/ssh-config/ssh_host_ed25519_key /etc/ssh/ssh_host_ed25519_key
     fi
-    if [ -f /etc/ssh/certs/ssh_host_rsa_key ]; then
-        ln -s /etc/ssh/certs/ssh_host_rsa_key /etc/ssh/ssh_host_rsa_key
+    if [ -f /etc/sftp/ssh-config/ssh_host_rsa_key ]; then
+        ln -s /etc/sftp/ssh-config/ssh_host_rsa_key /etc/ssh/ssh_host_rsa_key
     fi
 
 
